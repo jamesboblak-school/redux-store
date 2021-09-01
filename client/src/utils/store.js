@@ -1,6 +1,14 @@
 import { createStore } from 'redux'
-import rootReducer from './reducers'
+// import { composeWithDevTools } from 'redux-devtools-extension'   
+import reducers from './reducers'
 
-const store = createStore(rootReducer)
+const initialState = {
+    products: [],
+    cart: [],
+    cartOpen: false,
+    categories: [],
+    currentCategory: '',
+};
+const store = createStore(reducers, initialState);
 
 export default store
