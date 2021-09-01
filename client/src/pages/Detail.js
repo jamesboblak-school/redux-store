@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function Detail() {
   // const [state, dispatch] = useStoreContext();  // useDispatch/useSelector
-  dispatch = useDispatch();
+  const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { id } = useParams();
 
